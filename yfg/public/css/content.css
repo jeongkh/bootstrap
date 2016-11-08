@@ -1,0 +1,123 @@
+h1 .info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.15s ease-in;
+  padding-top: 170px;
+  opacity: 0;
+  color: #000000;
+}
+.ceo{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* 팀원 사진 */
+.item .box {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+/*사진 속 이름및 소개*/
+.item .cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.15s ease-in;
+  padding-top: 150px;
+  opacity: 0;
+  color: #000000;
+}
+.item .white{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.15s ease-in;
+  padding-top: 150px;
+  opacity: 0;
+  color: #ffffff;
+}
+.item:hover .cover{
+  opacity: 1;
+}
+.item .name .title{
+  font-weight: bold;
+}
+.social {
+  top: 0;
+  left: 0;
+  font-weight: bold;
+}
+
+/*footer에 위치한 뉴스 티켓 애니메이션 */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@keyframes ticker {
+	0%   {margin-top: 0}
+	25%  {margin-top: -30px}
+	50%  {margin-top: -60px}
+	75%  {margin-top: -90px}
+	100% {margin-top: 0}
+}
+
+
+.news {
+  box-shadow: inset 0 -15px 25px rgba(0,0,0,0.1), 0 5px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 3px;
+  -webkit-user-select: none
+}
+
+.news span {
+  float: left;
+  color: #000000;
+  padding: 4px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 -15px 25px rgba(0,0,0,0.1);
+  font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  cursor: pointer
+}
+
+.news ul {
+  float: left;
+  padding-left: 20px;
+  animation-duration: 10s;
+  animation-name: ticker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-user-select: none
+}
+
+.news ul li {line-height: 30px; list-style: none }
+
+.news ul li a {
+  color: #000000;
+  text-decoration: none;
+  font: 14px Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none
+}
+
+.news ul:hover { animation-play-state: paused }
+.news span:hover+ul { animation-play-state: paused }
+
+/* OTHER COLORS */
+
+.red { background: #ffffff }
+.red span { background: #ffffff }
